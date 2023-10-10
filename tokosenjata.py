@@ -5,6 +5,7 @@ senjata = PrettyTable()
 senjata.header = False
 senjata.border = False
 
+# Tabel Data
 senjata.field_names = ['id', 'nama_senjata', 'jenis_senjata', 'harga_senjata']
 senjata.add_row([1, 'AK47', 'AR', 5000000])
 senjata.add_row([2, 'AK74', 'AR', 7000000])
@@ -13,6 +14,7 @@ senjata.add_row([4, 'MP5', 'SMG', 8500000])
 
 senjata_list = []
 
+# Mengubah PrettyTable menjadi List
 for row in senjata:
     senjata_list.append(list(row))
 
@@ -21,6 +23,7 @@ senjata_list = [row.split() for row in senjata_list]
 
 os.system('cls')
 
+# Credential untuk Login
 admin = ['superadmin', '1234']
 pembeli = ['user', '1234']
 
@@ -167,7 +170,7 @@ def menu_user():
 # ================================================================================
 
 
-
+# Menu untuk Admin
 def admin_menu():
     print('=' * 60)
     print('Selamat datang Admin!!!!')
@@ -196,6 +199,7 @@ def admin_menu():
             break
 
 
+# Menu untuk User
 def user_menu():
     menu_user()
 
